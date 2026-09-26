@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --muted: 220 13% 46%;
+  --card: 210 40% 98%;
+  --border: 220 13% 91%;
+  --font-body: var(--font-plus-jakarta-sans);
+  --font-heading: var(--font-sniglet);
+}
+
+@theme inline {
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-plus-jakarta-sans);
+  --font-heading: var(--font-sniglet);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 222 47% 8%;
+    --foreground: 210 40% 96%;
+    --muted: 215 16% 70%;
+    --card: 222 47% 11%;
+    --border: 217 33% 17%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  line-height: 1.6;
+  letter-spacing: -0.011em;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: hsl(var(--foreground));
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 1.15;
+  }
+}
+
+h2 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+}
+
+@media (min-width: 640px) {
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.35rem;
+  line-height: 1.75rem;
+}
+
+p {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: hsl(var(--foreground) / 0.82);
+}
+
+small,
+.text-caption {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  color: hsl(var(--muted));
+}
+
+.text-kicker {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: hsl(var(--muted));
+}
