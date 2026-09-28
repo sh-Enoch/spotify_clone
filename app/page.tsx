@@ -75,7 +75,9 @@ function Home() {
         </div>
       </section>
       <section className="grid grid-cols-3">
-        <div></div>
+        <div>
+          content
+        </div>
         <div></div>
         <div></div>
       </section>
